@@ -32,3 +32,14 @@ app.get('/greeting', (req, res) => {
 app.get('/monsters', (req, res) => {
   res.send(['Giant Spider', 'Mummy', 'Ghost']);
 })
+
+app.get('/costumes', (req, res) => {
+  pool.query(`SELECT * FROM "costumes"`)
+    .then(function(results) {
+      res.send(results.rows);
+    })
+    .catch(function(error) {
+      console.log("error getting costumes:", error);
+      res.sendStatus(500);
+    })
+})
