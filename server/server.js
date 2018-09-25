@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const pg = require('pg');
 
+app.use(express.static('server/public'));
+
 const pool = new pg.Pool({
   host: 'localhost', // Server hosting the postgres database
   port: 5432, 
