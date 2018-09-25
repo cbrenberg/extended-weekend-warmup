@@ -11,3 +11,7 @@ app.listen(PORT, () => {
 app.get('/greeting', (req, res) => {
   res.send('Boo');
 })
+
+app.get('/monsters', (req, res) => {
+  res.send(['Giant Spider', 'Mummy', 'Ghost']);
+})
