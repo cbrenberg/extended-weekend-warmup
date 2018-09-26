@@ -9,7 +9,8 @@
   <script src="vendors/angular.min.js"></script>
   <script src="scripts/client.js"></script>
 </head>
-<body>
+<body ng-app="HalloweenApp" ng-controller="HalloweenController as vm">
   <h1>Happy Halloween</h1>
+  <div>{{vm.message}}</div>
 </body>
 </html>
